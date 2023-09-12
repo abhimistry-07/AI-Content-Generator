@@ -1,8 +1,3 @@
-body {
-    background: linear-gradient(to right, #ff47a1 0%, #ff9f4d 100%);
-    /* background: black; */
-  }
-  
   #sky {
     width: 100vw;
     height: 100vh;
@@ -10,9 +5,8 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    /* z-index: 1; */
   }
-  
+
   #shootingstars {
     margin: 0;
     padding: 0;
@@ -36,7 +30,6 @@ body {
     position: absolute;
     background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
     filter: drop-shadow(0 0 6px white);
-    /* overflow: hidden; */
+    overflow: hidden;
     z-index: 0;
   }
-  

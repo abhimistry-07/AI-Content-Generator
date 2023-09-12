@@ -35,13 +35,18 @@ function MainPage() {
   return (
     <div>
       <h1>{thing}</h1>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        id="flexContainer"
+        // style={{ display: "flex", justifyContent: "center" }}
+      >
         <input
           style={{
-            margin: "10px ",
+            margin: "auto",
+            width: "180px",
+            // margin: "10px ",
             border: "0px",
             borderRadius: "10px",
-            padding: "10px",
+            padding: "12px",
           }}
           type="text"
           placeholder="Enter a keyword"
@@ -50,10 +55,12 @@ function MainPage() {
         />
         <select
           style={{
-            margin: "10px",
+            margin: "auto",
+            width: "180px",
+            // margin: "10px",
             border: "0px",
             borderRadius: "10px",
-            padding: "10px",
+            padding: "12px",
           }}
           name=""
           onChange={(e) => setThing(e.target.value)}
@@ -65,7 +72,14 @@ function MainPage() {
           <option value="Story">Story</option>
           <option value="Quote">Quote</option>
         </select>
-        <button style={{ margin: "10px" }} onClick={fetchData}>
+        <button
+          style={{
+            width: "180px",
+            margin: "auto",
+            //  margin: "10px"
+          }}
+          onClick={fetchData}
+        >
           Generate {thing ? thing : "Data"}
         </button>
       </div>
@@ -74,19 +88,19 @@ function MainPage() {
 
       {data && !loading ? (
         <div
-          style={{
-            // backgroundColor: "#6A68E0",
-            width: "800px",
-            // height: "350px",
-            borderRadius: "50px",
-            padding: "20px",
-          }}
+          id="container"
+          // style={{
+          //   // backgroundColor: "#6A68E0",
+          //   width: "800px",
+          //   // height: "350px",
+          //   borderRadius: "50px",
+          //   padding: "20px",
+          // }}
         >
           <h2>{thing ? thing : "Data"}:</h2>
           <p style={{ fontWeight: "bold", fontSize: "20px" }}>{data}</p>
         </div>
       ) : (
-        // <Loader />
         ""
       )}
     </div>
