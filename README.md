@@ -78,13 +78,18 @@ To run this project, you will need to add the following environment variables to
 
 ## API Reference
 
-#### Get 
+#### Get
 
 ```http
   GET /search?thing=${thing}&keyword=${keyword}
 ```
 
 ## Demo
+
 ```
 https://content-generation-web-application.vercel.app/
 ```
+
+## Images
+
+<image src="./client/public/Image1" />
