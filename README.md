@@ -92,4 +92,4 @@ https://content-generation-web-application.vercel.app/
 
 ## Images
 
-<img src="./client/public/Image1" alt="Imag1"/>
+<img src="/Image1.jpg" />
