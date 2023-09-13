@@ -92,4 +92,4 @@ https://content-generation-web-application.vercel.app/
 
 ## Images
 
-<img src="/Image1.jpg" />
+![Alt text](/Image1.jpg)
