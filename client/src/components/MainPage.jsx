@@ -14,7 +14,6 @@ function MainPage() {
       const response = await axios.get(
         `https://server-5loa.onrender.com/search?thing=${thing}&keyword=${keyword}`
       );
-      // console.log(thing, keyword, "response >>>>>");
       setData(response.data.search);
       setLoading(false);
     } catch (error) {
@@ -30,20 +29,14 @@ function MainPage() {
     );
   };
 
-  // console.log(thing, "thing");
-
   return (
     <div>
-      <h1>{thing}</h1>
-      <div
-        id="flexContainer"
-        // style={{ display: "flex", justifyContent: "center" }}
-      >
+      <h1>{thing ? thing : "Welcome"}</h1>
+      <div id="flexContainer">
         <input
           style={{
             margin: "auto",
             width: "180px",
-            // margin: "10px ",
             border: "0px",
             borderRadius: "10px",
             padding: "12px",
@@ -57,7 +50,6 @@ function MainPage() {
           style={{
             margin: "auto",
             width: "180px",
-            // margin: "10px",
             border: "0px",
             borderRadius: "10px",
             padding: "12px",
@@ -76,7 +68,6 @@ function MainPage() {
           style={{
             width: "180px",
             margin: "auto",
-            //  margin: "10px"
           }}
           onClick={fetchData}
         >
@@ -87,16 +78,7 @@ function MainPage() {
       {loading ? <Loader /> : ""}
 
       {data && !loading ? (
-        <div
-          id="container"
-          // style={{
-          //   // backgroundColor: "#6A68E0",
-          //   width: "800px",
-          //   // height: "350px",
-          //   borderRadius: "50px",
-          //   padding: "20px",
-          // }}
-        >
+        <div id="container">
           <h2>{thing ? thing : "Data"}:</h2>
           <p style={{ fontWeight: "bold", fontSize: "20px" }}>{data}</p>
         </div>
