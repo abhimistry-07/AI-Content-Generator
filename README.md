@@ -47,7 +47,7 @@ Before you can start using this project, make sure you have the following prereq
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/abhimistry-07/content-generation-web-application.git
+   git clone https://github.com/abhimistry-07/AI-Content-Generator.git
    ```
 
 2. Change to the project directory:
