@@ -18,7 +18,7 @@ app.get('/search', async (req, res) => {
         const { keyword, thing } = req.query;
         const formattedKeyword = keyword.charAt(0).toUpperCase() + keyword.slice(1);
         // console.log(thing,keyword,">>>>>");
-        const response = await axios.post('https://api.openai.com/v1/engines/text-davinci-002/completions', {
+        const response = await axios.post('https://api.openai.com/v1/engines/gpt-3.5-turbo-instruct/completions', {
             prompt: `Tell me a ${thing} about ${formattedKeyword}.`,
             max_tokens: 100,
             temperature: 0.7,

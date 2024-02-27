@@ -12,6 +12,7 @@ function MainPage() {
     try {
       setLoading(true);
       const response = await axios.get(
+        // `http://localhost:8080/search?thing=${thing}&keyword=${keyword}`
         `https://server-5loa.onrender.com/search?thing=${thing}&keyword=${keyword}`
       );
       setData(response.data.search);
